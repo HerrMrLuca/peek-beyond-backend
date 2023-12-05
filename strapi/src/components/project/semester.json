@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_project_semesters",
+  "info": {
+    "displayName": "..",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Degree": {
+      "type": "enumeration",
+      "enum": [
+        "Bachelor",
+        "Master"
+      ],
+      "required": true
+    },
+    "Semester": {
+      "required": false,
+      "min": 1,
+      "max": 6,
+      "type": "integer"
+    },
+    "Department": {
+      "type": "enumeration",
+      "enum": [
+        "Medientechnik und -design",
+        "Digital Arts",
+        "Interactive Media"
+      ]
+    }
+  }
+}

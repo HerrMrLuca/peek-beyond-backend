@@ -13,12 +13,12 @@ Eine Sammlung von Feldern. Es können Inhalte aber nicht gespeichert also angele
 Also ein Überschriftenfeld (Überschrift (text) + Subüberschrift (text)).
 
 ## API
-Zum Abfragen der Inhalte schaut des dann so aus: 'http://localhost:1337/api/entries' (all) oder  'http://localhost:1337/api/entries/1' (one by id)
+Zum Abfragen der Inhalte schaut des dann so aus: 'http://localhost:1337/api/projects' (all) oder  'http://localhost:1337/api/projects/1' (one by id)
 
 ## NOTA BENE
 - Types können nur erstellt werden, wenn der Server im Dev-Modus gestartet worden ist.
 - Immer nach dem Erstellen von einem Type ```npm run strapi ts:generate-types``` laufen lassen und den dev-server neu starten. (nur bei TS, ist noch ein bug rip)
-- Man muss dann einzelne Typen in Settings->Roles für die Öffentlichkeit zuerst einmal freigeben, um von außen darauf zugreifen zu können. 
+- Man muss dann einzelne Typen in Settings->Users & Permissions plugin->Roles für die Öffentlichkeit zuerst einmal freigeben, um von außen darauf zugreifen zu können. 
 - Nach dem Löschen von Types den dist Ordner löschen und den Server neu starten. (dort bleiben die Sachen fürs Adminpanel nämlich noch hinterlegt)
 
 # Setup

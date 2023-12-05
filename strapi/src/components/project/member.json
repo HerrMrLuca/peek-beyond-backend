@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_project_members",
+  "info": {
+    "displayName": "Member",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Firstname": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "Surname": {
+      "type": "string",
+      "required": true
+    },
+    "Field_of_activity": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

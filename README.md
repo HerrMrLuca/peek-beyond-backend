@@ -65,3 +65,22 @@ Verbinde dich mit den Zugangsdaten zur Datenbank
 ![img3.png](imgReadme/img3.png)
 
 Nach "Ok" werden alle Inhalte importiert! 
+
+
+```
+HOST=127.0.0.1
+PORT=1337
+APP_KEYS=FUsHap5bzU9xFODpDwajEw==,sZB9SMYkIU75QQ0BaGl6jw==,j1eN9ao8efymq2aFt1/Zkw==,kD+km7ytPyGbrRJzA6tEBA==
+API_TOKEN_SALT=cCUkfqzkA4FVY2J/CM1OQg==
+ADMIN_JWT_SECRET=YX85L5WZjJs3GpZdDDuwEQ==
+TRANSFER_TOKEN_SALT=LUoQVblTogm/BLHDBHQYMA==
+# Database
+DATABASE_CLIENT=mysql
+DATABASE_HOST=localhost
+DATABASE_PORT=3306
+DATABASE_NAME=peek_beyond
+DATABASE_USERNAME=root
+DATABASE_PASSWORD=root
+DATABASE_SSL=false
+JWT_SECRET=y1twvXTWYDkbuQZABCEGmg==
+```

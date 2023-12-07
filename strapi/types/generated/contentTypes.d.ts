@@ -841,12 +841,6 @@ export interface ApiProjectProject extends Schema.CollectionType {
         minLength: 100;
         maxLength: 1000;
       }>;
-    supervisor: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }>;
     degree_and_semester: Attribute.Component<'project.semester', true> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
@@ -867,15 +861,29 @@ export interface ApiProjectProject extends Schema.CollectionType {
         };
       }>;
     members: Attribute.Component<'project.member', true> &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     gallery: Attribute.Media &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+      }>;
+    sub_categories: Attribute.Relation<
+      'api::project.project',
+      'oneToMany',
+      'api::category.category'
+    >;
+    supervisors: Attribute.Component<'project.supervisor', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
         };
       }>;
     createdAt: Attribute.DateTime;

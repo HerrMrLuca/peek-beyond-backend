@@ -17,7 +17,7 @@ export interface ProjectMember extends Schema.Component {
 export interface ProjectSemester extends Schema.Component {
   collectionName: 'components_project_semesters';
   info: {
-    displayName: '..';
+    displayName: 'Studyinfo';
     description: '';
   };
   attributes: {
@@ -33,11 +33,23 @@ export interface ProjectSemester extends Schema.Component {
   };
 }
 
+export interface ProjectSupervisor extends Schema.Component {
+  collectionName: 'components_project_supervisors';
+  info: {
+    displayName: 'Supervisor';
+  };
+  attributes: {
+    firstname: Attribute.String & Attribute.Required;
+    surname: Attribute.String & Attribute.Required;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'project.member': ProjectMember;
       'project.semester': ProjectSemester;
+      'project.supervisor': ProjectSupervisor;
     }
   }
 }

@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "Title": {
+    "title": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -25,7 +25,7 @@
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -36,7 +36,7 @@
       "maxLength": 1000,
       "minLength": 100
     },
-    "Supervisor": {
+    "supervisor": {
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -45,7 +45,7 @@
       "type": "string",
       "required": false
     },
-    "DegreeAndSemester": {
+    "degree_and_semester": {
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -56,29 +56,47 @@
       "component": "project.semester",
       "required": true
     },
-    "MainCategory": {
+    "main_category": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
     },
-    "categories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category",
-      "mappedBy": "project"
-    },
-    "Thumbnail": {
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "members": {
+      "type": "component",
+      "repeatable": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "required": true
+      "component": "project.member"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

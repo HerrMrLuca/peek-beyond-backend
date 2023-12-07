@@ -13,6 +13,17 @@ export default factories.createCoreController('api::category.category', ({strapi
           }
         }
       );
+      ctx.body = projects;
+    },
+
+    async projectsByCategory(ctx) {
+      const projects = await strapi.entityService.findMany('api::project.project', {
+          populate: {
+            // https://www.youtube.com/watch?v=F1f7LctorXQ
+            //TODO
+          }
+        }
+      );
 
       ctx.body = projects;
     },

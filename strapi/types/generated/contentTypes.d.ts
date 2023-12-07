@@ -694,25 +694,20 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     };
   };
   attributes: {
-    Category: Attribute.String &
+    title: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    Description: Attribute.Text &
+    description: Attribute.Text &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    project: Attribute.Relation<
-      'api::category.category',
-      'manyToOne',
-      'api::project.project'
-    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -743,6 +738,7 @@ export interface ApiEventEvent extends Schema.CollectionType {
     singularName: 'event';
     pluralName: 'events';
     displayName: 'Event';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -753,28 +749,28 @@ export interface ApiEventEvent extends Schema.CollectionType {
     };
   };
   attributes: {
-    Title: Attribute.String &
+    title: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    Description: Attribute.Text &
+    description: Attribute.Text &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    Start: Attribute.DateTime &
+    start: Attribute.DateTime &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    End: Attribute.DateTime &
+    end: Attribute.DateTime &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -827,14 +823,14 @@ export interface ApiProjectProject extends Schema.CollectionType {
     };
   };
   attributes: {
-    Title: Attribute.String &
+    title: Attribute.String &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
-    Description: Attribute.Text &
+    description: Attribute.Text &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
@@ -845,31 +841,38 @@ export interface ApiProjectProject extends Schema.CollectionType {
         minLength: 100;
         maxLength: 1000;
       }>;
-    Supervisor: Attribute.String &
+    supervisor: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
-    DegreeAndSemester: Attribute.Component<'project.semester', true> &
+    degree_and_semester: Attribute.Component<'project.semester', true> &
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;
         };
       }>;
-    MainCategory: Attribute.Relation<
+    main_category: Attribute.Relation<
       'api::project.project',
       'oneToOne',
       'api::category.category'
     >;
-    categories: Attribute.Relation<
-      'api::project.project',
-      'oneToMany',
-      'api::category.category'
-    >;
-    Thumbnail: Attribute.Media &
+    thumbnail: Attribute.Media &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    members: Attribute.Component<'project.member', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    gallery: Attribute.Media &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

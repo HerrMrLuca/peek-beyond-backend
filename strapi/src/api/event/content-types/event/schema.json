@@ -4,7 +4,8 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Event"
+    "displayName": "Event",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,7 +16,7 @@
     }
   },
   "attributes": {
-    "Title": {
+    "title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -24,7 +25,7 @@
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -33,7 +34,7 @@
       "type": "text",
       "required": true
     },
-    "Start": {
+    "start": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -42,7 +43,7 @@
       "type": "datetime",
       "required": true
     },
-    "End": {
+    "end": {
       "pluginOptions": {
         "i18n": {
           "localized": true

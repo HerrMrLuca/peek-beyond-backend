@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "Degree": {
+    "degree": {
       "type": "enumeration",
       "enum": [
         "Bachelor",
@@ -14,13 +14,13 @@
       ],
       "required": true
     },
-    "Semester": {
+    "semester": {
       "required": false,
       "min": 1,
       "max": 6,
       "type": "integer"
     },
-    "Department": {
+    "department": {
       "type": "enumeration",
       "enum": [
         "Medientechnik und -design",

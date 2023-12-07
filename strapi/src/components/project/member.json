@@ -7,16 +7,16 @@
   },
   "options": {},
   "attributes": {
-    "Firstname": {
+    "firstname": {
       "type": "string",
       "required": true,
       "unique": false
     },
-    "Surname": {
+    "surname": {
       "type": "string",
       "required": true
     },
-    "Field_of_activity": {
+    "field_of_activity": {
       "type": "string",
       "required": true
     }

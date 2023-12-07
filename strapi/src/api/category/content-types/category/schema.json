@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "Category": {
+    "title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -25,7 +25,7 @@
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -33,12 +33,6 @@
       },
       "type": "text",
       "required": true
-    },
-    "project": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::project.project",
-      "inversedBy": "categories"
     }
   }
 }

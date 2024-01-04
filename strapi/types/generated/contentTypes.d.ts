@@ -857,7 +857,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     members: Attribute.Component<'project.member', true> &
@@ -871,7 +871,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
       Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     sub_categories: Attribute.Relation<

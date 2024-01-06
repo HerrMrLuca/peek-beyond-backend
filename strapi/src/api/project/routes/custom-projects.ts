@@ -32,6 +32,5 @@ export default {
       path: "/projects/category/main/:id",
       handler: "project.projectsByMainCategory",
     },
-
   ],
 };

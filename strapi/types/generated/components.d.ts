@@ -28,7 +28,12 @@ export interface ProjectSemester extends Schema.Component {
         max: 6;
       }>;
     department: Attribute.Enumeration<
-      ['Medientechnik und -design', 'Digital Arts', 'Interactive Media']
+      [
+        'Medientechnik und -design',
+        'Media Technology and Design',
+        'Digital Arts',
+        'Interactive Media'
+      ]
     >;
   };
 }

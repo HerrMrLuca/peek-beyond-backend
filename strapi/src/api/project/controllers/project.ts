@@ -21,7 +21,8 @@ export default factories.createCoreController('api::project.project', ({strapi})
     const projects = await strapi.entityService
       .findMany('api::project.project', {
           populate: [
-            'thumbnail'
+            'thumbnail',
+            'main_category'
           ],
           locale: locale,
         }
@@ -38,7 +39,8 @@ export default factories.createCoreController('api::project.project', ({strapi})
     const projects = await strapi.entityService
       .findMany('api::project.project', {
           populate: [
-            'thumbnail'
+            'thumbnail',
+            'main_category'
           ],
           locale: locale,
           orderBy: {
@@ -76,7 +78,7 @@ export default factories.createCoreController('api::project.project', ({strapi})
       data: project
     };
   },
-  
+
   async projectsByCategory(ctx) {
     let locale = getLocale(ctx);
 
@@ -177,7 +179,7 @@ export default factories.createCoreController('api::project.project', ({strapi})
       //NOTE .projects löschen dann erhält man keine Category Infos mehr
       result[i]/*.projects*/ = projects;
     }
-    
+
     ctx.body = {
       data: result
     };

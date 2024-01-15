@@ -13,12 +13,12 @@ Eine Sammlung von Feldern. Es können Inhalte aber nicht gespeichert also angele
 Also ein Überschriftenfeld (Überschrift (text) + Subüberschrift (text)).
 
 ## API
-Zum Abfragen der Inhalte schaut des dann so aus: 'http://localhost:1337/api/entries' (all) oder  'http://localhost:1337/api/entries/1' (one by id)
+Zum Abfragen der Inhalte schaut des dann so aus: 'http://localhost:1337/api/projects' (all) oder  'http://localhost:1337/api/projects/1' (one by id)
 
 ## NOTA BENE
 - Types können nur erstellt werden, wenn der Server im Dev-Modus gestartet worden ist.
 - Immer nach dem Erstellen von einem Type ```npm run strapi ts:generate-types``` laufen lassen und den dev-server neu starten. (nur bei TS, ist noch ein bug rip)
-- Man muss dann einzelne Typen in Settings->Roles für die Öffentlichkeit zuerst einmal freigeben, um von außen darauf zugreifen zu können. 
+- Man muss dann einzelne Typen in Settings->Users & Permissions plugin->Roles für die Öffentlichkeit zuerst einmal freigeben, um von außen darauf zugreifen zu können. 
 - Nach dem Löschen von Types den dist Ordner löschen und den Server neu starten. (dort bleiben die Sachen fürs Adminpanel nämlich noch hinterlegt)
 
 # Setup
@@ -26,20 +26,20 @@ Zum Abfragen der Inhalte schaut des dann so aus: 'http://localhost:1337/api/entr
 - [Node (npm)](https://nodejs.org/en/download/current)
 - MySQL Server (lokal)
   - [Tutorial](https://www.youtube.com/watch?v=u96rVINbAUI)
-  - Notiere dir bitte auch die Zugangsdaten, die du für dein Setup eingegeben hast, sonst kannst du keine deiner Datenbanken verwalten. (Nicht auf dieses Projekt bezogen)
+  - Notiere dir bitte auch die Zugangsdaten, die du für dein Setup eingegeben hast, sonst kannst du keine deiner Datenbanken verwalten.
+  - Beim Aufsetzten des Servers beachte, dass du bei der Authentication Method auf Legacy umstellst
 - [Xampp](https://www.apachefriends.org/de/download.html) für _mysqldump.exe_ (falls du die exe schon woanders hast sind deine Pfade unten auch anders und du brauchst xampp nicht installieren)
 
 ## DB 
-Bitte beachte beim anlegen der Datenbank folgende Einstellungen:
 - Port: **3306**
 - DB Name: **peek_beyond**
-- DB Username: **root**
-- DB PW: **root**
+- DB Username: **dein username** 
+- DB PW: **dein password**
 
 ### Export
 #### Default
 ```bash
-C:\xampp\mysql\bin\mysqldump -u root -p peek_beyond -r "C:\...\db.sql"
+C:\xampp\mysql\bin\mysqldump -u username -p peek_beyond -r "C:\...\db.sql"
 ```
 Wenn du nach dem PW gefragt wirst einfach "root" eingeben
 
@@ -51,7 +51,7 @@ Verbinde dich mit den Zugangsdaten zur Datenbank
 ### Import
 #### Default
 ```shell
-C:\xampp\mysql\bin\mysql -u root -p peek_beyond;
+C:\xampp\mysql\bin\mysql -u username -p peek_beyond;
 ```
 Dann ist man in der DB
 Kopiere dass dann rein: (natürlich mit deinem Pfad zum Projekt lol)
@@ -65,3 +65,33 @@ Verbinde dich mit den Zugangsdaten zur Datenbank
 ![img3.png](imgReadme/img3.png)
 
 Nach "Ok" werden alle Inhalte importiert! 
+
+Kopiere dir diese inhalte in ein .env file und ändere die Datenbank config wie du sie brauchst:
+```
+HOST=127.0.0.1
+PORT=1337
+APP_KEYS=FUsHap5bzU9xFODpDwajEw==,sZB9SMYkIU75QQ0BaGl6jw==,j1eN9ao8efymq2aFt1/Zkw==,kD+km7ytPyGbrRJzA6tEBA==
+API_TOKEN_SALT=cCUkfqzkA4FVY2J/CM1OQg==
+ADMIN_JWT_SECRET=YX85L5WZjJs3GpZdDDuwEQ==
+TRANSFER_TOKEN_SALT=LUoQVblTogm/BLHDBHQYMA==
+# Database
+DATABASE_CLIENT=mysql
+DATABASE_HOST=localhost
+DATABASE_PORT=3306
+DATABASE_NAME=peek_beyond
+DATABASE_USERNAME=root
+DATABASE_PASSWORD=root
+DATABASE_SSL=false
+JWT_SECRET=y1twvXTWYDkbuQZABCEGmg==
+```
+
+## Universal User
+Mit SuperAdmin rechten:
+```
+alex@mustermensch.com
+!4&u@Gfu}bFeT7e
+```
+
+
+Maybe interesting:
+https://www.youtube.com/watch?v=F1f7LctorXQ

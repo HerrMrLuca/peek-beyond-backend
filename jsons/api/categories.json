@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "attributes": {
+        "description": "text",
+        "createdAt": "2023-12-05T20:17:56.095Z",
+        "updatedAt": "2023-12-07T15:46:49.466Z",
+        "publishedAt": "2023-12-05T20:18:50.273Z",
+        "locale": "de",
+        "title": "Audio/Video"
+      }
+    },
+    {
+      "id": 2,
+      "attributes": {
+        "description": "text",
+        "createdAt": "2023-12-05T20:18:37.713Z",
+        "updatedAt": "2023-12-07T15:48:09.172Z",
+        "publishedAt": "2023-12-05T20:18:44.055Z",
+        "locale": "de",
+        "title": "Web/App"
+      }
+    },
+    {
+      "id": 3,
+      "attributes": {
+        "description": "text",
+        "createdAt": "2023-12-05T20:19:02.171Z",
+        "updatedAt": "2023-12-07T15:47:57.598Z",
+        "publishedAt": "2023-12-05T20:19:02.966Z",
+        "locale": "de",
+        "title": "Games/XR"
+      }
+    },
+    {
+      "id": 4,
+      "attributes": {
+        "description": "text",
+        "createdAt": "2023-12-05T20:19:14.620Z",
+        "updatedAt": "2023-12-07T15:47:44.083Z",
+        "publishedAt": "2023-12-05T20:19:16.177Z",
+        "locale": "de",
+        "title": "Animation"
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 25,
+      "pageCount": 1,
+      "total": 4
+    }
+  }
+}

@@ -4,7 +4,8 @@ export default {
       // 'ar',
       // 'fr',
       // 'cs',
-      'de'
+      'de',
+      'en'
       // 'dk',
       // 'es',
       // 'he',

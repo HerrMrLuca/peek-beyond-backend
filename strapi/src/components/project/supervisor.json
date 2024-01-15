@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_project_supervisors",
+  "info": {
+    "displayName": "Supervisor"
+  },
+  "options": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "surname": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

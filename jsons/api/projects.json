@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Peek Beyond",
+      "createdAt": "2023-12-05T18:46:20.109Z",
+      "updatedAt": "2023-12-07T22:56:48.034Z",
+      "publishedAt": "2023-12-07T10:56:37.453Z",
+      "locale": "de",
+      "description": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+      "thumbnail": {
+        "id": 1,
+        "name": "hiu1d77raxv31.png",
+        "alternativeText": null,
+        "caption": null,
+        "width": 640,
+        "height": 733,
+        "formats": {
+          "small": {
+            "ext": ".png",
+            "url": "/uploads/small_hiu1d77raxv31_7c8dd9f8ab.png",
+            "hash": "small_hiu1d77raxv31_7c8dd9f8ab",
+            "mime": "image/png",
+            "name": "small_hiu1d77raxv31.png",
+            "path": null,
+            "size": 367.98,
+            "width": 437,
+            "height": 500
+          },
+          "thumbnail": {
+            "ext": ".png",
+            "url": "/uploads/thumbnail_hiu1d77raxv31_7c8dd9f8ab.png",
+            "hash": "thumbnail_hiu1d77raxv31_7c8dd9f8ab",
+            "mime": "image/png",
+            "name": "thumbnail_hiu1d77raxv31.png",
+            "path": null,
+            "size": 45.39,
+            "width": 136,
+            "height": 156
+          }
+        },
+        "hash": "hiu1d77raxv31_7c8dd9f8ab",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 188.62,
+        "url": "/uploads/hiu1d77raxv31_7c8dd9f8ab.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "folderPath": "/",
+        "createdAt": "2023-12-07T10:55:02.536Z",
+        "updatedAt": "2023-12-07T10:55:02.536Z"
+      }
+    }
+  ]
+}

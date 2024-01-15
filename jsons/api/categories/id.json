@@ -1,0 +1,14 @@
+{
+  "data": {
+    "id": 1,
+    "attributes": {
+      "description": "text",
+      "createdAt": "2023-12-05T20:17:56.095Z",
+      "updatedAt": "2023-12-07T15:46:49.466Z",
+      "publishedAt": "2023-12-05T20:18:50.273Z",
+      "locale": "de",
+      "title": "Audio/Video"
+    }
+  },
+  "meta": {}
+}

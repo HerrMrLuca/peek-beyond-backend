@@ -886,7 +886,8 @@ export interface ApiProjectProject extends Schema.CollectionType {
           localized: false;
         };
       }>;
-    Projectvideo: Attribute.Media &
+    video_url: Attribute.String &
+      Attribute.Required &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: false;

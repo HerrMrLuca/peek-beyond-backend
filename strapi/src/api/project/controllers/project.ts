@@ -64,7 +64,17 @@ export default factories.createCoreController('api::project.project', ({strapi})
         },
       );
 
-    if (locale == "en") {
+    if (locale === "en" && locale !== project.locale) {
+      let id = project.localizations[0].id;
+
+      project = await strapi.entityService
+        .findOne('api::project.project', id, {
+            populate: '*'
+          },
+        );
+    }
+
+    if (locale === "de" && locale !== project.locale) {
       let id = project.localizations[0].id;
 
       project = await strapi.entityService

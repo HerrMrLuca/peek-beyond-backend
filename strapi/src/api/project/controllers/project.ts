@@ -28,8 +28,10 @@ export default factories.createCoreController('api::project.project', ({strapi})
         }
       );
 
+    const publishedProjects = projects.filter(project => project.publishedAt !== null);
+
     ctx.body = {
-      data: projects
+      data: publishedProjects,
     };
   },
 
@@ -50,8 +52,10 @@ export default factories.createCoreController('api::project.project', ({strapi})
         },
       );
 
+    const publishedProjects = projects.filter(project => project.publishedAt !== null);
+
     ctx.body = {
-      data: projects
+      data: publishedProjects,
     };
   },
 
@@ -131,8 +135,10 @@ export default factories.createCoreController('api::project.project', ({strapi})
         }
       );
 
+    const publishedProjects = projects.filter(project => project.publishedAt !== null);
+
     ctx.body = {
-      data: projects
+      data: publishedProjects,
     };
   },
 
@@ -152,8 +158,10 @@ export default factories.createCoreController('api::project.project', ({strapi})
           },
         }
       );
+    const publishedProjects = projects.filter(project => project.publishedAt !== null);
+
     ctx.body = {
-      data: projects
+      data: publishedProjects,
     };
   },
 
@@ -190,8 +198,10 @@ export default factories.createCoreController('api::project.project', ({strapi})
       result[i]/*.projects*/ = projects;
     }
 
+    const publishedProjects = result.filter(project => project.publishedAt !== null);
+
     ctx.body = {
-      data: result
+      data: publishedProjects,
     };
   },
 }));
